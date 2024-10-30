@@ -5,7 +5,6 @@ import json
 def getRec():
     response = requests.get('https://api.jikan.moe/v4/random/anime')
     json_data = json.loads(response.text)
-    print(json_data['data']['url'])
     return json_data['data']['url']
 
 class MyClient(discord.Client):
